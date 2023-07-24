@@ -1,0 +1,33 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ts {
+    display: flex;
+    align-items: center;
+  }
+
+  .search {
+    height: 40px;
+    font-size: 18px;
+    font-family: "Varela Round", sans-serif;
+    color: #303030;
+    text-align: right;
+    padding: 0 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  @media only screen and (max-width: 520px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+    .search {
+        width: 100%;
+        text-align: center;
+      }
+  }
