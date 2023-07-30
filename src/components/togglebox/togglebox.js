@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Tooltip } from 'react-tooltip';
 
 export const ToggleBox = ({
     unitSystem,
@@ -50,7 +51,7 @@ export const ToggleBox = ({
                             </div>
                             {
                                 displayDates.length > 0 && (
-                                    <div className='flex justify-around items-center'>
+                                    <div id='selectDay' className='flex justify-around items-center'>
                                         <select value={choosenDay} onChange={toggleDay} disabled={toggleSelectDisabled}
                                             className='outline-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-1 h-7 md:h-9'>
                                             <option className='' data-index={0} value={displayDates[0]}>{displayDates[0]}</option>
@@ -68,6 +69,11 @@ export const ToggleBox = ({
                                             <option value="18">18 PM</option>
                                             <option value="21">21 PM</option>
                                         </select>
+                                        { weatherType === 'today' &&
+                                            <Tooltip anchorSelect="#selectDay">
+                                                Click on Forecast!
+                                            </Tooltip>
+                                        }
                                     </div>
                                 )
                             }
