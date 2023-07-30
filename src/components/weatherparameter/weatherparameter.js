@@ -1,17 +1,18 @@
-import styles from "./weatherparameter.module.css";
 import PropTypes from 'prop-types';
 
 export const WeatherParam = ({ title, iconSrc, metric, unit }) => {
   return (
-    <div className={styles.wrapper}>
-      <p>{title}</p>
-      <div className={styles.content}>
-        <div >
-          <img width="100px" height="100px" src={iconSrc} alt="weatherIcon" />
+    <div className='grid grid-cols-1 bg-white rounded-xl items-end p-2'>
+      <div className='text-right'>
+        <p className='font-bold mr-2'>{title}</p>
+      </div>
+      <div className='grid grid-cols-2 shrink-0 items-start gap-2'>
+        <div className='w-20 h-20 text-center' >
+          <img className='object-cover' src={iconSrc} alt="weatherIcon" />
         </div>
-        <div>
-          <h1>{metric}</h1>
-          <p>{unit}</p>
+        <div className='text-center'>
+          <p className='text-xl sm:text-2xl font-bold'>{metric}</p>
+          <p className='font-bold sm:text-xl'>{unit}</p>
         </div>
       </div>
     </div>
@@ -19,11 +20,11 @@ export const WeatherParam = ({ title, iconSrc, metric, unit }) => {
 }
 
 WeatherParam.propTypes = {
-  title : PropTypes.string,
-  iconSrc : PropTypes.string,
-  metric : PropTypes.oneOfType([
+  title: PropTypes.string,
+  iconSrc: PropTypes.string,
+  metric: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
   ]),
-  unit : PropTypes.string
+  unit: PropTypes.string
 }

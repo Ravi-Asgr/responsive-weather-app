@@ -1,11 +1,10 @@
 import { WeatherParam } from "../weatherparameter/weatherparameter";
-import styles from "./parameters.module.css";
 import { WindCardinal, Visibility, TimeFromTs, WindSpeed, TimePeriod } from "../../util";
 import PropTypes from 'prop-types';
 
 export const WeatherParameters = ({ weatherData, unit }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className='grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4 sm:mr-4'>
       { weatherData && Object.keys(weatherData).length != 0 && (
       <>  
       <WeatherParam

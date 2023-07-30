@@ -1,8 +1,7 @@
-import styles from "./detail.module.css";
 import PropTypes from 'prop-types';
 
 export const WeatherDetail = ({ children }) => {
-  return <div className={styles.wrapper}>{children}</div>;
+  return <div className='grid px-5 pb-5 sm:px-0 grid-cols-1 w-full'>{children}</div>
 };
 
 WeatherDetail.propTypes = {

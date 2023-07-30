@@ -1,5 +1,6 @@
+import './index.css';
+
 import ReactDOM from 'react-dom/client';
-import './css/global.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from 'react-toastify';
