@@ -36,25 +36,29 @@ export const ToggleBox = ({
                     <div className='grid grid-cols-[0.5fr_1fr_3.5fr] items-center gap-1 sm:gap-5'>
                         <h2 className='text-sm sm:text-xl font-bold'>Report</h2>
                         <div onClick={changeWeatherFunction}>
-                            <a href="#" name='today' className={`px-1 py-1 mr-1 text-white ${weatherType === 'today' ? 'bg-orange-500' : 'bg-black'}`}
-                            >Today</a>
+                            <a href="#" name='today'
+                                className={`px-1 md:px-2 py-1 md:py-2 mr-1 text-white ${weatherType === 'today' ? 'bg-orange-500' : 'bg-black'}`}>
+                                Today
+                            </a>
                         </div>
                         <div className='grid grid-cols-[0.5fr_2.5fr] items-center'>
                             <div onClick={changeWeatherFunction}>
-                                <a href="#" name='forecast' className={weatherType === 'forecast' ? 'bg-orange-500 px-1 py-1 mr-1 text-white'
-                                    : 'bg-black px-1 py-1 mr-1 text-white'}>Forecast</a>
+                                <a href="#" name='forecast'
+                                    className={weatherType === 'forecast' ? 'bg-orange-500 px-1 md:px-2 py-1 md:py-2 mr-1 text-white' : 'bg-black px-1 md:px-2 py-1 md:py-2 mr-1 text-white'}>
+                                    Forecast
+                                </a>
                             </div>
                             {
                                 displayDates.length > 0 && (
                                     <div className='flex justify-around items-center'>
                                         <select value={choosenDay} onChange={toggleDay} disabled={toggleSelectDisabled}
-                                            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-1 h-7'>
+                                            className='outline-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-1 h-7 md:h-9'>
                                             <option className='' data-index={0} value={displayDates[0]}>{displayDates[0]}</option>
-                                            <option className='' data-index={1} value={displayDates[0]}>{displayDates[1]}</option>
-                                            <option className='' data-index={2} value={displayDates[0]}>{displayDates[2]}</option>
+                                            <option className='' data-index={1} value={displayDates[1]}>{displayDates[1]}</option>
+                                            <option className='' data-index={2} value={displayDates[2]}>{displayDates[2]}</option>
                                         </select>
                                         <select value={forecastDayHour} onChange={toggleHour} disabled={toggleSelectDisabled}
-                                             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-1 h-7'>
+                                            className='outline-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-1 h-7 md:h-9'>
                                             <option value="0">0 AM</option>
                                             <option value="3">3 AM</option>
                                             <option value="6">6 AM</option>

@@ -18,7 +18,7 @@ export const Filter = ({
                 </h2>
             )}
 
-            <input className='border-none px-2 sm:mr-5 rounded-lg text-right self-start sm:h-8 overflow-hidden'
+            <input className='px-2 sm:mr-5 rounded-md md:rounded-lg text-right border md:border-2 border-gray-300 outline-0 self-start sm:h-8 overflow-hidden'
                 type="text" placeholder={placeHolder} onFocus={onFocus} onChange={onChange} onKeyDown={onKeyDown}
                 value={city}>
             </input>
