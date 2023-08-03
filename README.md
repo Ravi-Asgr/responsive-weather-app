@@ -8,8 +8,11 @@
 * React
 * Tailwind
 ## Screenshots
-Web
-Mobile
+### Web
+![](web.PNG)
+### Mobile
+![](mobile-1.PNG)  
+![](mobile-2.PNG)
 
 # Getting Started with Create React App
 
